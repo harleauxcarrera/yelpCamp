@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="icon" href="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-culture/022224-3d-transparent-glass-icon-culture-space-alien1-sc37.png">
+      <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade" rel="stylesheet">
+      
+
+        <title>Carlos Herrera</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!--Link to external style sheet-->
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <!--check for browser's animation compatibility-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+    
+    <!-- flash message conditionals-->
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    <!--#landing-header used in landing.css-->
+    <div id="landing-header">
+ 		<h1>Carlos Herrera</h1>
+		<a href="/campgrounds" class="btn btn-lg btn-success">Media Projects</a>
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include partials/footer %>

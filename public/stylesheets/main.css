@@ -1,0 +1,137 @@
+
+li,a{
+    font-family: 'Aladin', cursive;
+
+
+
+
+}
+
+h1,h3,h4{
+    font-family: 'Aladin', cursive;
+    font_color: white;
+}
+
+p{
+    font-family: 'Aladin', cursive;
+}
+
+
+body{
+
+
+    background-image: url("https://t3.ftcdn.net/jpg/01/04/61/96/240_F_104619688_UP27I7cxkZKuNZn9GxCLCj0TztesAyMV.jpg");
+}
+/*make all thumbnails pics take up whole width of container*/
+.thumbnail img{
+    width: 100%;
+}
+
+/*remove padding from all thumbnails*/
+.thumbnail{
+    padding: 0;
+}
+
+.caption-fill{
+    padding: 9px;
+}
+
+#delete-form{
+    display: inline;
+}
+
+#content{
+  background-color: #A1A19F;
+}
+
+button{
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
+
+
+
+
+
+
+
+
+
+/*SLIDESHOW ADD ON TO EVERY PAGE IN HERE SO WE CAN DO WHATEVER IT IS THAT WE WANT TO DO*/
+
+/*picture slideshow will show behind all content (z-index = 0, hide list bullets (list-style))*/
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*add some style to all the list items */
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 25s linear infinite; /*fade images in and out, linear-same speed, loop-infinite*/
+}
+
+
+/*add images to each li item in the slideshow, find out how to add pics to a fodler and reference them*/
+.slideshow li:nth-child(1) {
+  background-image: url(http://i.imgur.com/K3mPv14.jpg)
+}
+.slideshow li:nth-child(2) {
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 5s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  animation-delay: 15s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 20s;
+}
+
+/*Now we can create the keyframes for the animation:*/
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/*Lastly, we need to add animation support for older browsers; */
+
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}

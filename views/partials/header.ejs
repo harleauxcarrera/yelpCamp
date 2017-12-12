@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="icon" href="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-culture/115385-magic-marker-icon-culture-space-alien1-sc37.png">
+
+     
+        <title> Harleaux Carrera</title>
+           <link rel= "stylesheet"href ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" > 
+            <!--link to external style sheet-->
+           <link rel="stylesheet" href="/stylesheets/main.css">  
+           <!--FONT-->
+           <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
+           <!--FONT-->
+           <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+    </head>
+     
+    <body>
+    <!--Nav bar-->
+    <nav class="navbar navbar-default" style="background-color: #996600;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"> Home </a>
+            </div>
+            <div class="collapse navbar-collapse"><!--collapses into sandwich menu for small screen(mobile)-->
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                  <% if (!currentUser) { %>
+                        
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/register">Sign up</a></li>
+                      <% } else { %>
+                      
+                                 <li><a href="/profile">Signed in as: <%= currentUser.username %></a></li>
+                      
+                      
+                                <li><a href="/logout">Log out</a></li>
+                               <% } %>
+                    </ul>
+            </div>
+        </div>
+    </nav> 
+ 
+ 
+ 
+ <!--container so error flash message doesnt take up whole screen-->
+ <div class ="container">
+     <% if(error && error.length > 0){%>
+          <!--flash message alert-->
+        <div class="alert alert-danger" role="alert">
+           <%= error %> 
+        </div>
+      <% } %>        
+ </div>
+
+ <!--container so success flash message doesnt take up whole screen(success.length > 0 needed)-->
+ <div class ="container">
+        <% if(success && success.length > 0){%>
+          <!--flash message alert-->
+        <div class="alert alert-success" role="alert">
+           <%= success %> 
+        </div>
+      <% } %>    
+ </div>
+
+
+ 
+        
+   </body>
