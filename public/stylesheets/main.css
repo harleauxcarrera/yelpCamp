@@ -9,11 +9,16 @@ li,a{
 
 h1,h3,h4{
     font-family: 'Aladin', cursive;
-    font_color: white;
+    color: white;
 }
 
 p{
     font-family: 'Aladin', cursive;
+}
+
+#loginForm{
+  padding-left: 400px;
+  text-align: center;
 }
 
 
