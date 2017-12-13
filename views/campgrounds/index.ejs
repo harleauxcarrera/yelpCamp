@@ -4,7 +4,7 @@
 
 
 <!--container-->
-<div class="container">
+<div style = "padding-top: 15px;" class="container">
     <header id="content" class="jumbotron">
         <div class="container">
             <h1>This is my media page!</h1>
@@ -22,10 +22,15 @@
         </div>
     </header>
 
+    <div class="container">
+      <div class="col-lg-12" id="myDiv">
+      <h3>Here is where we can type something and give it a border to make sure its working</h3>
+      </div>
+    </div>
 
     <div class="container">
-        <div class="col-lg-12">
-            <h3>Our Most Popular campgrounds!</h3>
+        <div class="col-md-12">
+            <h1 style="text-align: center;">Our Most Popular campgrounds!</h1>
         </div>
     </div>
 
@@ -33,10 +38,10 @@
 
     <div class="row text-center" style="display:flex; flex-wrap: wrap;"><!--styled so grid images all on same line-->
         <% campgrounds.forEach(function(campground){%>
-            <div class="col-md-3 col-sm-6"><!--each pic 3 units when medium screen, 6 units when small -->
-              <div class="thumbnail">
+            <div  class="col-md-3 col-sm-6"><!--each pic 3 units when medium screen, 6 units when small -->
+              <div id = "myCampCell" class="thumbnail">
 
-                  <img src= "<%=campground.image %>">
+                  <img style= "border-bottom: 3px solid; " src= "<%=campground.image %>">
 
                   <div class="caption">
                      <h4><%= campground.name%></h4>

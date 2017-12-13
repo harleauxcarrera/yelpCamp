@@ -22,10 +22,11 @@ router.get("/profile", function(req, res) {
 router.get("/register", function(req, res) {
     res.render("register");
 });
-
+//register route for creating  new user
 router.post("/register", function(req, res) {
     var newUser = new User({ username: req.body.username });
-    User.register(newUser, req.body.password, function(err, user) {
+    var profileImage = req.body.profileImage;
+    User.register(newUser, req.body.password, profileImage: image, function(err, user) {
         if (err) {
             req.flash("error",err.message);
             console.log(err)
