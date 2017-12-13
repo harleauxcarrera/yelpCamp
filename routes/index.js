@@ -26,7 +26,7 @@ router.get("/register", function(req, res) {
 router.post("/register", function(req, res) {
     var newUser = new User({ username: req.body.username });
     var profileImage = req.body.profileImage;
-    User.register(newUser, req.body.password, profileImage: image, function(err, user) {
+    User.register(newUser, req.body.password, profileImage, function(err, user) {
         if (err) {
             req.flash("error",err.message);
             console.log(err)
@@ -35,7 +35,7 @@ router.post("/register", function(req, res) {
         }
         //if registration went through, render the campgrounds page
         passport.authenticate("local")(req, res, function() {
-             req.flash("success","sucess , Welcome to yelpCamp " + user.username);
+             req.flash("success","sucess , Welcome to yelpCamp "  + user.username);
             res.redirect("/campgrounds");
         });
     });
