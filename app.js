@@ -22,10 +22,12 @@ var indexRoutes = require("./routes/index");
 //seedDB(); //clean DB and add three hardcodes campgrounds
 mongoose.Promise = global.Promise; //required
 
-//**switch to MLAB to serve DB so comment out localhost connection
-//mongoose.connect("mongodb://localhost/yelp_camp", { useMongoClient: true }); //connect to DB and make yelp_camp DB
+//create Environment var in terminal (local Environment var will be the local mongodb server)
+//env var in heroku will be the mongolab URI
+mongoose.connect(process.env.DATABASEURL);
 
-mongoose.connect("mongodb://harleauxcarrera:please313@ds111638.mlab.com:11638/mockyelpcamp");
+
+//mongoose.connect("mongodb://harleauxcarrera:please313@ds111638.mlab.com:11638/mockyelpcamp");
 app.set("view engine", "ejs"); // to avoid ending all files with '.ejs'node.
 app.use(bodyParser.urlencoded({ extended: true })); //required
 app.use(express.static(__dirname + "/public")); //to serve main.css in /public

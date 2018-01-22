@@ -18,4 +18,12 @@ HOW TO CONNECT MONOGDB TO Heroku
   paste mongoURI below the connect statement in app.js
     create a DB user for access to DB
 
-      
+Monday Jan 22
+Lecture 334
+
+ need to make the deployment code on heroku use a different database
+then our development code (dont want to be pushing to the same db (testing vs deplyment))
+
+Make deployment code use local instance of mongodb (uncomment connect line/ comment out mongoURI)
+
+Environment variables - vars that change depending on the Environment they app is running on(heroku vs localhost)
