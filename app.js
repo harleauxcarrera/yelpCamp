@@ -66,7 +66,9 @@ app.use("/campgrounds" ,campgroundRoutes);
 ////////////////////////Code required to start the server//////////////////
 
 //changed the port
-app.listen(5000)
+app.listen(process.env.PORT || 3000, function(){
+  console.log('app running at port 3000...');
+});
 	console.log("the server has started");
 
 ////////////////////////Code required to start the server//////////////////
