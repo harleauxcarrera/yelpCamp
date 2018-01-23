@@ -27,3 +27,9 @@ then our development code (dont want to be pushing to the same db (testing vs de
 Make deployment code use local instance of mongodb (uncomment connect line/ comment out mongoURI)
 
 Environment variables - vars that change depending on the Environment they app is running on(heroku vs localhost)
+
+Make a DATABASEURL environment variable for local development (made in terminal)
+Make a DATABSEURL environment variable for deployment on heroku (Settings-> Env Vars-> Create->Save)
+      (^^ can also be made in the terminal but easier this way ^^)
+
+Env Vars are good bcthey are not exposed they are hidden - good for serurity
