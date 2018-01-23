@@ -19,7 +19,7 @@ var indexRoutes = require("./routes/index");
 
 //create Environment var in terminal (local Environment var will be the local mongodb server)
 //env var in heroku will be the mongolab URI
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 mongoose.connect(url);
 //MLAB URI
 //mongoose.connect("mongodb://harleauxcarrera:please313@ds111638.mlab.com:11638/mockyelpcamp");
