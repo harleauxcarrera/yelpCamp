@@ -17,17 +17,15 @@ var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
-
 ///////////Required/////////////////////
 
 //seedDB(); //clean DB and add three hardcodes campgrounds
-//removes error
 mongoose.Promise = global.Promise; //required
 
-//create Environment var in terminal (local Environment var will be the local mongodb server)
-//env var in heroku will be the mongolab URI
-mongoose.connect(process.env.DATABASEURL);
-
+mongoose.connect(process.env.DATABASEURL);//check to see if env vvar was made
+//use local instance of mongodb (seperate db than deployment version on heroku)
+//mongoose.connect("mongodb://localhost/yelp_camp", { useMongoClient: true }); //connect to DB and make yelp_camp DB
+//create env variable (create new env var in the command line : export NAME= "url")
 
 //mongoose.connect("mongodb://harleauxcarrera:please313@ds111638.mlab.com:11638/mockyelpcamp");
 app.set("view engine", "ejs"); // to avoid ending all files with '.ejs'node.
