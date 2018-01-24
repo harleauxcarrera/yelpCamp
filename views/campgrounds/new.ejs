@@ -1,41 +1,17 @@
-<% include ../partials/header%>
-<style>
-
-.inputfield{
-    height: 200px;
-
-}
-</style>
+<% include  ../partials/header%>
+<link rel="stylesheet" href="../public/stylesheets/main.css">
 
 
-<div class="container">
+<div id = "signupForm">
+  <h1>Create new Campground</h1>
+  <form action="/campgrounds" method ="POST">
 
-    <div class="row">
-         <h1 style="text-align: center">Create a new Campground</h1>
-         <div style="width: 30%; margin: 36px auto;"> <!--margin used to center form-->
-
-            <form action="/campgrounds" method="POST">
-
-
-                <div class="form-group">
-                   <input class="form-control" type="text" name="name" placeholder="Enter  name">
-                </div>
-
-                <div class="form-group">
-                 <input class="form-control" type="text" name="image" placeholder="Enter the image URL">
-                </div>
-
-                <div class="form-group">
-                 <input class="form-control" type="text" name="description" placeholder="Enter a description of the campground">
-                </div>
-
-
-                <div class="form-group">
-                <button id = "myButton" class="btn btn-lg btn-primary btn-block">Submit!</button>
-                </div>
-            </form>
-            <a id= "myLink" href="/campgrounds">Go Back</a>
-    </div>
-
+      <input type = "text" name="name" placeholder = "Campground Nassme" style="width: 300px; margin-bottom: 15px; text-align: center; border-radius: 4px; border-color: black;"><br>
+      <input type = "text" name="image" placeholder = "Image URL" style="width: 300px; margin-bottom: 15px; text-align: center; border-radius: 4px; border-color: black;"><br>
+      <input type = "text-area" name="description" placeholder = "Description" style="width: 300px; margin-bottom: 15px; text-align: center; border-radius: 4px; border-color: black;"><br>
+      <input class="btn btn-primary" style="background-color: #A8B276  ; color: black; font-family: 'Amatic SC', cursive; font-size: 20px; width: 300px ; border-color: black; margin-bottom: 30px;" type = "submit" value="Submit">
+  </form>
 </div>
-    <% include ../partials/footer%>
+
+
+<% include ../partials/footer%>

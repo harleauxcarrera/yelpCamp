@@ -1,12 +1,17 @@
 <% include  ./partials/header%>
-<h1>Sign up!</h1>
+<link rel="stylesheet" href="../public/stylesheets/main.css">
 
-<form = action="/register" method="POST">
-    <input type = "text" name="username" placeholder="username"><br>
-    <input type = "password" name="password" placeholder="password"><br>
-      <input class="btn btn-primary" type = "submit" value="Login!">
-    </form>
 
+<div id = "signupForm">
+  <h1>Sign up</h1>
+  <form action="/register" method = "POST">
+
+      <input type = "text" name="username" placeholder = "Username" style="width: 300px; margin-bottom: 15px; text-align: center; border-radius: 4px; border-color: black;"><br>
+      <input type = "password" name="password" placeholder = "Password" style="width: 300px; margin-bottom: 15px; text-align: center; border-radius: 4px; border-color: black;"><br>
+
+      <input class="btn btn-primary" style="background-color: #A8B276  ; color: black; font-family: 'Amatic SC', cursive; font-size: 20px; width: 300px ; border-color: black; margin-bottom: 30px;" type = "submit" value="Register">
+  </form>
+</div>
 
 
 <% include ./partials/footer%>

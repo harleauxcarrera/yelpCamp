@@ -33,3 +33,10 @@ Make a DATABSEURL environment variable for deployment on heroku (Settings-> Env 
       (^^ can also be made in the terminal but easier this way ^^)
 
 Env Vars are good bcthey are not exposed they are hidden - good for serurity
+
+fix env var : not working when try to use a var = url mongoose.connect(url) have to use hardcoded mongolab URI
+
+Wednesday Jan 24th
+
+  Clean up site and push to heroku master
+  

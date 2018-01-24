@@ -1,14 +1,12 @@
 
 li,a{
-    font-family: 'Aladin', cursive;
-
-
-
-
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    color: black;
 }
 
-h1,h4{
-    font-family: 'Aladin', cursive;
+h1{
+    font-family: 'Satisfy', cursive;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -16,14 +14,23 @@ h3  {
   color: black;
   font-family: 'Aladin', cursive;
 }
-
-p{
-    font-family: 'Aladin', cursive;
+h4{
+  font-family: 'Amatic SC', cursive;
+  font-size: 28px;
 }
 
-#loginForm{
-  padding-left: 400px;
+p{
+    font-family: 'Amatic SC', cursive;
+
+}
+
+#loginForm, #signupForm{
   text-align: center;
+  background-color: #CBC2B7;
+  border: 4px solid black;
+  width: 400px;
+  margin: auto;
+  margin-top: 35px;
 }
 
 
@@ -32,6 +39,11 @@ body{
 
     background-image: url("https://t3.ftcdn.net/jpg/01/04/61/96/240_F_104619688_UP27I7cxkZKuNZn9GxCLCj0TztesAyMV.jpg");
 }
+
+#addNew{
+  font-family: 'Satisfy', cursive;
+}
+
 #myDiv{
   border: 4px solid;
   border-radius: 12px;
@@ -41,8 +53,8 @@ body{
 
 }
 #myNavBar{
-  background-color: white;
-  border: 3px solid grey;
+  background-color: #F0E9E0;
+  border: 3px solid black;
   border-radius: 6px;
   color: black;
 }
